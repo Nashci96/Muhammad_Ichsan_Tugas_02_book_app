@@ -48,11 +48,11 @@ class BookController extends ChangeNotifier {
   BookListResponse? similiarBooks;
   fetchSimiliarBookApi(String title) async {
     // print(widget.isbn);
-    var url = Uri.parse('https://api.itbook.store/1.0/search/${title}');
+    var url = Uri.parse('https://api.itbook.store/1.0/search/$title');
     var response =
         await http.get(url);
-    print('Response status: ${response.statusCode}');
-    print('Response body: ${response.body}');
+    // print('Response status: ${response.statusCode}');
+    // print('Response body: ${response.body}');
 
     if(response.statusCode == 200){
       final jsonDetail = jsonDecode(response.body);
